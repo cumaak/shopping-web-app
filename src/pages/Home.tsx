@@ -1,8 +1,13 @@
 import React from 'react'
+import Header from '../components/Header'
+import MobileNavbar from '../components/MobileNavbar'
 
 const Home = () => {
   return (
-    <div className='text-orange-500 text-3xl'>Homepage</div>
+    <>
+      <header><Header/></header>
+      <MobileNavbar/>
+    </>
   )
 }
 

@@ -3,7 +3,7 @@ import { useAppDispatch, useAppSelector } from '../redux/hooks';
 import { getCategories } from '../redux/features/categoriesSlice';
 import Slider from "react-slick";
 
-const CategorySlider = () => {
+const CategorySlider:React.FC = () => {
   const dispatch = useAppDispatch()
   const categories: Array<string> = useAppSelector((state) => state.categories.categories)
 

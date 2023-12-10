@@ -1,18 +1,20 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import "slick-carousel/slick/slick.css"; 
+import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Header from './components/Header';
+import MobileNavbar from './components/MobileNavbar';
 
-function App() {
+const App:React.FC = () => {
   return (
-    <div>
-      <Router>
-        <Routes>
-          <Route path="/" element={<Home/>} />
-        </Routes>
-      </Router>
-    </div>
+    <Router>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
+      <MobileNavbar/>
+    </Router>
   );
 }
 

@@ -3,7 +3,7 @@ import { FaRegUser } from "react-icons/fa";
 import { GrFavorite } from "react-icons/gr";
 import { GrCart } from "react-icons/gr";
 
-const Navbar = () => {
+const Navbar:React.FC = () => {
   return (
     <nav className='hidden lg:flex gap-12'>
         <button className='flex gap-1.5 items-center'><FaRegUser size={20}/><span className='text-sm font-medium'>Login</span></button>

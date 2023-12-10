@@ -1,16 +1,13 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import axios from "axios"
+import { ICategories } from "../../types/Types"
 
-
-interface CategoriesState{
-    categories: Array<string>
-}
-const initialState: CategoriesState = {
+const initialState: ICategories = {
     categories: []
 }
 
 export const getCategories = createAsyncThunk('categories', async () =>{
-    const {data} = await axios.get('https://dummyjson.com/products/categories')
+    const {data} = await axios.get<Array<string>>('https://dummyjson.com/products/categories')
     return data
 })
 

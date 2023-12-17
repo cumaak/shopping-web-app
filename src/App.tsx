@@ -1,10 +1,10 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import Header from './components/Header';
 import MobileNavbar from './components/MobileNavbar';
+import Category from './pages/Category';
+import ProductDetail from './pages/ProductDetail';
 
 const App:React.FC = () => {
   return (
@@ -12,6 +12,8 @@ const App:React.FC = () => {
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
+        <Route path='/category/:category' element={<Category />} />
+        <Route path='/products/:id' element={<ProductDetail/>} />
       </Routes>
       <MobileNavbar/>
     </Router>

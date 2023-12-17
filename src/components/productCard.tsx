@@ -7,7 +7,7 @@ interface IProductCartProps{
 }
 const ProductCard:React.FC<IProductCartProps> = ({product}) => {
   return (
-    <div className='border flex flex-col w-40 sm:w-80 lg:w-64 h-72 sm:h-[600px] lg:h-[400px] text-sm rounded-lg mx-1 shadow'>
+    <a href={`/products/${product.id}`} className='border flex flex-col h-80 sm:h-[600px] lg:h-[400px] text-sm rounded-lg mx-1 shadow'>
       <div className='w-full h-1/2 sm:h-4/5 lg:h-3/5'>
         <img src={product.thumbnail} alt={product.title} className='object-contain h-full w-full border'/>
       </div>
@@ -21,7 +21,7 @@ const ProductCard:React.FC<IProductCartProps> = ({product}) => {
           <span className='text-orange-600 font-medium'>${product.price}.99</span>
         </div>
       </div>
-    </div>
+    </a>
   )
 }
 

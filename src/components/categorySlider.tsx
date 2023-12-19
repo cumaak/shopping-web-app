@@ -35,7 +35,7 @@ const CategorySlider:React.FC = () => {
       >
         {categories.map((category) => {
           return (
-            <SwiperSlide key={category} className='!w-auto text-sm font-medium'><a href={`/category/${category}`} className='hover:underline underline-offset-4 hover:text-orange-600'>{category}</a></SwiperSlide>
+            <SwiperSlide key={category} className='!w-auto text-sm font-semibold'><a href={`/category/${category}`} className='hover:underline underline-offset-4 hover:text-orange-600'>{category}</a></SwiperSlide>
           )
         })}
       </Swiper>

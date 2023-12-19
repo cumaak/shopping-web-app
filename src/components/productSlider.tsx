@@ -14,7 +14,7 @@ const ProductSlider:React.FC<IProductSliderProps> = ({products}) => {
         loop={true}
         slidesPerView={2.3}
         spaceBetween={2}
-        className='my-swiper mb-52'
+        className='my-swiper mb-28'
         breakpoints={{
           640:{
             slidesPerView: 2.2,

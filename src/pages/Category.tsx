@@ -1,11 +1,11 @@
-import {useEffect, useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { useParams } from 'react-router'
 import { IProductsOfCategory } from '../types/Types'
 import axios from 'axios'
 import ProductCard from '../components/productCard'
 import ProductSorting from '../components/productSorting'
 
-const Category = () => {
+const Category:React.FC = () => {
     const {category} = useParams<{category: string}>()
     const [categoryProducts, setCategoryProducts] = useState<IProductsOfCategory>({products:[], limit:0, skip:0, total:0})
     const [sortKey, setSortKey] = useState<string>('')

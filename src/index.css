@@ -3,6 +3,11 @@
 @tailwind components;
 @tailwind utilities;
 
+:root{
+    --navbar-height: 58px;
+    --canvas-height: calc(100vh - var(--navbar-height));
+}
+
 body{
     font-family: 'Nunito', sans-serif;
 }

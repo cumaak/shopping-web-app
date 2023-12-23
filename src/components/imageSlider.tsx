@@ -20,6 +20,7 @@ const ImageSlider: React.FC<IImageSliderProps> = ({ product }) => {
   return (
     <section className='border-b lg:border-none w-full lg:w-2/5'>
       <Swiper
+        key={"swiper1"}
         zoom={true}
         navigation={true}
         pagination={{
@@ -42,9 +43,9 @@ const ImageSlider: React.FC<IImageSliderProps> = ({ product }) => {
           },
         }}
       >
-        {product.images.map((image) => {
+        {product.images.map((image, index) => {
           return (
-            <SwiperSlide key={product.id} className='p-10'>
+            <SwiperSlide key={"swiper1-"+index} className='p-10'>
               <div className="swiper-zoom-container h-full">
                 <img src={image} alt={product.title} className='object-cover w-full h-full' />
               </div>
@@ -53,6 +54,7 @@ const ImageSlider: React.FC<IImageSliderProps> = ({ product }) => {
         })}
       </Swiper>
       <Swiper
+        key={"swiper2"}
         onSwiper={setThumbsSwiper}
         spaceBetween={10}
         slidesPerView={8}
@@ -61,9 +63,9 @@ const ImageSlider: React.FC<IImageSliderProps> = ({ product }) => {
         modules={[FreeMode, Navigation, Thumbs]}
         className="mySwiper h-16 mt-3 !hidden lg:!flex"
       >
-        {product.images.map((image) => {
+        {product.images.map((image, index) => {
           return (
-            <SwiperSlide key={product.id} className='h-full !w-16 border rounded-md p-1'>
+            <SwiperSlide key={"swiper2-"+index} className='h-full !w-16 border rounded-md p-1'>
               <img src={image} alt={product.title} className='object-contain h-full mx-auto' />
             </SwiperSlide>
           )

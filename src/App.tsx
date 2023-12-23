@@ -5,6 +5,7 @@ import Header from './components/Header';
 import MobileNavbar from './components/MobileNavbar';
 import Category from './pages/Category';
 import ProductDetail from './pages/ProductDetail';
+import Search from './pages/Search';
 
 const App:React.FC = () => {
   return (
@@ -14,6 +15,7 @@ const App:React.FC = () => {
         <Route path="/" element={<Home />} />
         <Route path='/category/:category' element={<Category />} />
         <Route path='/products/:id' element={<ProductDetail/>} />
+        <Route path='/products/search/:searchValue' element={<Search/>} />
       </Routes>
       <MobileNavbar/>
     </Router>

@@ -7,7 +7,7 @@ interface IProductSorting {
 const ProductSorting: React.FC<IProductSorting> = ({ sortKey, setSortKey }) => {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   return (
-    <div onClick={() => setIsOpen(!isOpen)} className='relative flex border-2 rounded px-4 py-2 mx-1 mb-3 text-sm w-48 active:border-orange-600 cursor-pointer'>
+    <div onClick={() => setIsOpen(!isOpen)} className='relative flex border-2 rounded px-4 py-2 mx-1 mb-3 mt-2 text-sm w-48 active:border-orange-600 cursor-pointer'>
       {sortKey == '' ? "Sort by" : sortKey}
       <HiSortDescending size={20} className="ml-auto mt-0.5 text-orange-600" />
       <div className={`${isOpen == true ? "flex" : "hidden"} fixed lg:absolute items-end lg:items-stretch bg-black lg:bg-transparent bg-opacity-50 z-20 w-screen h-screen left-0 top-0 lg:-left-[166px] lg:-top-[130px] overflow-hidden`}>

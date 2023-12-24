@@ -8,6 +8,7 @@ import ProductDetail from './pages/ProductDetail';
 import Search from './pages/Search';
 import Cart from './pages/Cart';
 import Favorites from './pages/Favorites';
+import Sign from './pages/Sign';
 
 const App:React.FC = () => {
   return (
@@ -20,6 +21,7 @@ const App:React.FC = () => {
         <Route path='/products/search/:searchValue' element={<Search/>} />
         <Route path='/my-cart' element={<Cart/>} />
         <Route path='/my-favorites' element={<Favorites/>} />
+        <Route path='/sign' element={<Sign/>} />
       </Routes>
       <MobileNavbar/>
     </Router>

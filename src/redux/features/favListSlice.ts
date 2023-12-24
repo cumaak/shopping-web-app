@@ -13,16 +13,16 @@ export const favListSlice = createSlice ({
     name: "favList",
     initialState,
     reducers: {
-        addProduct: (state, action: PayloadAction<IProduct>) => {
+        addToFav: (state, action: PayloadAction<IProduct>) => {
             state.products.unshift(action.payload)
             localStorage.setItem("favList", JSON.stringify(state.products))
         },
-        deleteProduct: (state, action: PayloadAction<IProduct>) => {
+        deleteFromFav: (state, action: PayloadAction<IProduct>) => {
             state.products = state.products.filter((product)=> product.id !== action.payload.id)
             localStorage.setItem("favList", JSON.stringify(state.products))
         }
     }
 })
 
-export const {addProduct, deleteProduct} = favListSlice.actions
+export const {addToFav, deleteFromFav} = favListSlice.actions
 export default favListSlice.reducer

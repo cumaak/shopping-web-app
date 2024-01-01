@@ -48,8 +48,8 @@ const HighlightsSlider: React.FC<IHighlightsSliderProps> = ({ flashProducts }) =
                   <span>discount</span>
                 </span>
                 <span className='flex flex-col font-bold'>
-                  <span className='line-through text-center text-xs sm:text-sm lg:text-base'>${Math.ceil(product.price + product.price * (product.discountPercentage / 100))}.99</span>
-                  <span className='text-base sm:text-lg lg:text-xl text-center'>${product.price}.99</span>
+                  <span className='line-through text-center text-xs sm:text-sm lg:text-base'>${Math.ceil(product.price + product.price * (product.discountPercentage / 100))}</span>
+                  <span className='text-base sm:text-lg lg:text-xl text-center'>${product.price}</span>
                 </span>
               </div>
               <div className='w-1/2 h-full flex items-center justify-center'>

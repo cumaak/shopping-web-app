@@ -11,6 +11,10 @@ export interface IProduct {
     thumbnail: string,
     images: Array<string>
 }
+export interface IProductState {
+    product: IProduct,
+    amount: number
+}
 export interface IProductsOfCategory{
     products: IProduct[],
     limit: number,

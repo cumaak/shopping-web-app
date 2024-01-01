@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { IProduct } from '../types/Types'
 import { Rating } from '@mui/material'
 import { useAppDispatch, useAppSelector } from '../redux/hooks'
@@ -35,12 +35,12 @@ const ProductCard: React.FC<IProductCardProps> = ({ product }) => {
             <Rating name="half-rating-read" defaultValue={product.rating} precision={0.1} size='small' readOnly />
           </div>
           <div className='flex flex-col'>
-            <span className='line-through'>${Math.ceil(product.price + product.price * (product.discountPercentage / 100))}.99</span>
-            <span className='text-orange-600 font-bold'>${product.price}.99</span>
+            <span className='line-through'>${Math.ceil(product.price + product.price * (product.discountPercentage / 100))}</span>
+            <span className='text-orange-600 font-bold'>${product.price}</span>
           </div>
         </div>
       </a>
-      <button onClick={() => { addFavorites(product) }} className='absolute top-0 right-1 text-orange-600 rounded-2xl bg-gray-200 p-2 m-1'>{favList.includes(product) == true ? <FaHeart size={17} /> : <FaRegHeart size={17} />}
+      <button onClick={() => { addFavorites(product) }} className='absolute top-0 right-1 text-orange-600 rounded-2xl bg-gray-200 p-2 m-1'>{favList.includes(product) != false ? <FaHeart size={17} /> : <FaRegHeart size={17} />}
       </button>
     </div>
   )

@@ -14,10 +14,10 @@ const Favorites: React.FC = () => {
       {favList.map((product) => {
         return (
           <div key={product.id} className='flex border rounded-md shadow-md p-1 w-full text-sm'>
-            <a href={`/products/${product.id}`} className='w-1/3 h-24 border my-4'>
+            <a href={`/products/${product.id}`} className='w-1/3 lg:w-1/4 h-24 lg:h-56 border my-4 lg:my-0'>
               <img className='object-contain w-full h-full' src={product.thumbnail} alt={product.title} />
             </a>
-            <div className='flex flex-col justify-between w-2/3 p-1 pl-3'>
+            <div className='flex flex-col justify-between w-2/3 lg:w-3/4 p-1 pl-3 lg:pl-8 lg:p-5'>
               <a href={`/products/${product.id}`} className='flex flex-col w-full'>
                 <span className='font-semibold'>{product.brand}</span>
                 <span className='text-gray-600 truncate w-5/6'> {product.title}</span>
@@ -27,7 +27,7 @@ const Favorites: React.FC = () => {
                 </div>
               </a>
               <div className='flex justify-between items-end'>
-                <span className='text-orange-600 font-semibold'>${product.price}.99</span>
+                <span className='text-orange-600 font-semibold'>${product.price}</span>
                 <button onClick={()=>dispatch(addToCart(product))} className='border border-orange-600 rounded-md px-4 py-0.5 text-orange-600'>Add to Cart</button>
               </div>
             </div>

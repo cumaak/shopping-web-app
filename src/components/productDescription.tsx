@@ -36,11 +36,11 @@ const ProductDescription: React.FC<IProductDescriptionProps> = ({ product }) => 
         <span className='font-bold pt-0.5'>{product.rating}</span>
         <Rating name="half-rating-read" defaultValue={product?.rating} precision={0.1} size='small' readOnly />
         <span className='px-2'>|</span>
-        <span onClick={() => { addFavorites(product) }} className='text-orange-600'>{favList.includes(product) == true ? <FaHeart size={17} /> : <FaRegHeart size={17} />}</span>
+        <span onClick={() => { addFavorites(product) }} className='text-orange-600'>{favList.includes(product) === true ? <FaHeart size={17} /> : <FaRegHeart size={17} />}</span>
       </div>
       <div className='pt-6 pb-20 lg:pb-0'>{product.description}</div>
       <div className='fixed lg:static z-20 lg:z-0 bottom-0 left-0 lg:mt-auto lg:mb-36 bg-white w-full px-4 lg:px-0 flex justify-between lg:justify-center items-center py-3 lg:py-0 border lg:border-none'>
-        <span className='lg:hidden text-orange-600 font-bold'>${product.price}.99</span>
+        <span className='lg:hidden text-orange-600 font-bold'>${product.price}</span>
         <button onClick={() => dispatch(addToCart(product))} className='px-10 lg:px-36 py-2.5 lg:py-4 lg:mx-auto border rounded-md bg-orange-600 hover:bg-orange-700 text-white  font-semibold lg:font-bold'><ShoppingCartOutlinedIcon className='!hidden lg:!inline mr-3 mb-1' />Add to Cart</button>
       </div>
     </section>
